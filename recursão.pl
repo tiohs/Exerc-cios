@@ -9,4 +9,4 @@ mdc(Xk,Y,Resposta).
 mdc(X,Y,Resposta):-
 Y>X,
 Yk is Y-X,
-mdc(K,YK,Resposta).
+mdc(X,Yk,Resposta).
