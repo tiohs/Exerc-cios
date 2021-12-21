@@ -1,0 +1,114 @@
+
+
+
+
+
+
+
+a)Unibelas fica sitada em talatona.
+R:Situado(unibelas,talatona).
+b)Só é mossorongo quem nasceu no soyo.
+R:nasceu(pedro,soyo).
+situaado(soyo,zaire).
+nasceu(A,B),
+situado(B,zaire).
+
+seleccionar apenas o dia e mês.R:diaMês(Dia,Mes):-
+data(Dia,Mês,_).
+selecianr dia e ano.
+R:diaAno(Dia,Ano):-
+data(Dia,_,Ano).
+
+
+
+
+
+
+
+
+
+escreva uma regra paara o calculo de perimetro de um trapézio.
+Resposta
+perimetro(A,B,C,Base,P):-
+P is A+B+C+Base.
+
+escreva uma regra paara o calculo da area superficial do cone circular recto. 
+Resposta
+areaTotal(R,v,At):-
+At is pi*R^2+pi*R*sqrt(R^2+9*V/2/(pi^2*R^4)).
+
+escreva uma regra paara o calculo do volume do tronco de piramide.
+Resposta
+volume(H,AB,Ab,V):-
+V is 1/3 *H*(AB+sqrt(AB*Ab+Ab)).
+
+escreva uma regra para o calculo do volume do tronco de um cone.
+Resposta
+volume(H,RM,Rm,V):-
+V is 1/3*pi*H*(Rm^2+Rm*RM+RM^2).
+escreva uma regra para o calculo da area total do cilindro.
+resposta
+R:area(R,H,Ar):-
+At is 2*R*H+pi/2*R^2+pi/2*R*sqrt(R^2+H^2).
+
+representa as comparações abaixo em expressões validas em prolog.
+a)200= 180+20.
+R:200==180+20
+b)98 +2?200-80.
+R:98+2 =\=200-80.
+c)Antonio?Pedro.
+R:António\==Pedro.
+diga qual sera o resultado das seguintes em prolog para as consultas a seguir indicadas?
+a)A is A+1.
+R:Os argumentos não estão suficientemente instanciados.
+4656=\=1424.
+R:true.
+22-10>=10+22.
+R:false.
+a)unibelas fica situada em talatona.
+R:situado(unibelas,talatona).
+
+pai(bento,ze).
+pai(ze,juju).
+pai(ze,zito).
+pai(ze,nela).
+pai(zito,tila).
+pai(bento,lili).
+mae(carla,ze).
+mae(nela,lu).
+mae(juju,leo).
+masculino(bento).
+masculino(ze).
+masculino(zito).
+masculino(leo).
+feminino(carla).
+feminino(lili).
+feminino(nela).
+feminino(tila).
+feminino(lu).
+feminino(juju).
+bisneto(X,Y):-
+mae(Y,A).
+pai(A,B),
+mae(B,X),
+masculino(X).
+
+bisneto(X,Y):-
+pai(Y,A),
+pai(A,B),
+mae(B,X),
+masculino(X).
+
+b)Escreva uma consulta que permite saber quem é o pai de Nela.
+R:pai(X,nela).
+c)escreva uma consulta que permita saber de quem carla é mae.R:mae(Carla,X).
+
+b)Escreva uma consulta que permite saber quem é o pai de Dulca.R:pai(X,dulce).
+c)escreva uma consulta que permita saber de quem jo é padrasto.R:padrasto(jo,X).
+
+c)escreva uma consulta que permita saber quem é a mae de ju.R:mae(X,ju).
+c)escreva uma consulta que permita saber de quem Kito é pai.R:pai(kito,X).
+
+d)escreva uma consulta que permita saber quem é o pai de zeca.R:pai(X,zeca).
+
+r)escreva uma consulta que permita saber de quem Dada é bisavó.R:bisavó(dada,X).

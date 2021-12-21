@@ -1,0 +1,45 @@
+registe todos factos possiveis e derive a regra A é entenda B. 
+enteuda(A,B):-
+feminino(A),
+pais(S,A),
+pai(S,KI),
+mae(Ku,A),
+mae(B,Ki),
+B\==Ku.
+---
+registe todos factos possiveis e derive a regra P é bisavó J.
+bisavó(P,J):-
+feminino(P),
+mae(P,R),
+pai(R,D),
+pai(D,J).
+---
+registe todos factos possiveis e derive a regra M é padrastro L.
+ regra padrasto.
+padrasto(M,L):-
+pai(M,A),´
+pai(D,L),
+mae(R,A),
+mae(R,L),
+M\==D.
+----
+registe todos factos possiveis e derive a regra X é bisneto Y.
+bisneto(X;Y):-
+mae(Y,A),
+pai(A,B),
+mae(B,X),
+masculino(X).
+---
+escreva uma consulta que permita saber quem é o pai de Dulce.
+R:pai(X,dulce).
+escreva uma consulta que permita saber quem é o pai de nela.
+R:pai(X,nela).
+
+escreva uma consulta que permita saber quem Carla é mae.
+R:mae(Carla,X).
+escreva uma consulta que permita saber de quem jo é padrasto.
+R:padrasto(jo,X).
+ecreva uma consulta que permite saber de quem vina é mae.
+R:mae(vina,X).
+ecreva uma consulta que permite saber de quem kito é pai.
+R:pai(kito,X).
