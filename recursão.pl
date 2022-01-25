@@ -35,3 +35,38 @@ N2 is N-2,
 fibo(N1,R1),
 fibo(N2,R2),
 R is R1+R2.
+
+% Factorial 
+
+%Base 
+fact(0,1).
+fact(1,1).
+% Indução
+
+fact(N,F):-
+N>1,
+N1 is N-1,
+fact(N1,F1),
+F is N*F1.
+
+% Regra número de gerção 
+pai(dino,zé).
+pai(zé,lito).
+pai(lito,vera).
+pai(lito,kito).
+mae(vera,bela).
+mae(vera,simao).
+pai(kito,dudu).
+pai(kito,kicas).
+% Caso base 
+nrGeracao(X,Y,1):-
+pai(X,Y).
+
+nrGeracao(X,Y,1):-
+mae(X,Y).
+
+%Caso indutivo
+nrGeracao(X,Y,N):-
+pai(X,K),
+nrGeracao(K,Y,Ng),
+N is 1 + Ng.
