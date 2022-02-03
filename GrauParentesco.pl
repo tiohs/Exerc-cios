@@ -5,8 +5,8 @@ pai(leko, lita).
 pai(leo, vado).
 pai(leo, ruka).
 pai(zito, mauro).
-mãe(dina, zito).
-mãe(dina, minga).
+mae(dina, zito).
+mae(dina, minga).
 masculino(juca).
 masculino(leko).
 masculino(leo).
@@ -18,20 +18,20 @@ femenino(dina).
 femenino(minga).
 femenino(lita).
 
-avô(A, B):-
+ava(A, B):-
 pai(A, R),
 pai(R, B),
 masculino(A),
 masculino(R).
 
-avô(A, B):-
+ava(A, B):-
 pai(A, R),
-mãe(R, B),
+mae(R, B),
 masculino(A),
 femenino(R).
 
-avó(Z, P):-
-mãe(Z, M),
-mãe(M, P),
+ava(Z, P):-
+mae(Z, M),
+mae(M, P),
 femenino(Z),
 masculino(M).
